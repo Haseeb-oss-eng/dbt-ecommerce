@@ -5,10 +5,8 @@ Welcome to your new dbt project!
 Try running the following commands:
 - dbt build
 
+### Objective
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](http://slack.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+- Connect to Snowflake to get the table from data platform
+- Try to create Staging -> Intermediate -> Mart in models.
+- Create tests General test and Singular test.

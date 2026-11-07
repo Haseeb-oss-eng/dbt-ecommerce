@@ -1,0 +1,9 @@
+sources:
+  - name: ECOMMERCE_SNOW_SCHEMA
+    database: ECOMMERCE_DB
+    schema: ECOMMERCE_SNOW_SCHEMA
+    tables:
+      - name: customers
+      - name: orders
+      - name: order_items
+      - name: products
