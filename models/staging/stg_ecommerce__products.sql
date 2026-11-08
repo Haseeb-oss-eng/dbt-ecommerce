@@ -1,7 +1,7 @@
 select
 
     cast(products.product_id as varchar) as product_id,
-    cast(products.product_category_name as varchar) as product_catgeory_name,
+    cast(products.product_category_name as varchar) as product_category_name,
     cast(products.product_name_length as decimal(10,2)) as product_name_length,
     cast(products.product_description_length as decimal(10,2)) as product_description_length,
     cast(products.product_photos_qty as int) as product_photos_qty,
