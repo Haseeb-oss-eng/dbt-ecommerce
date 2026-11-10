@@ -1,0 +1,45 @@
+models:
+    - name: stg_ecommerce__customers
+      description: "Staging model for customers data"
+      columns:
+        - name: customer_id
+          description: "Unique identifier for each customer"
+          data_tests:
+            - unique
+            - not_null
+        - name: customer_unique_id
+          description: "Unique identifier for each customer across all systems"
+          data_tests:
+            - unique
+            - not_null
+            
+    - name: stg_ecommerce__orders
+      description: "Staging model for orders data"
+      columns:
+        - name: order_id
+          description: "Unique identifier for each order"
+          data_tests:
+            - unique
+            - not_null
+            
+    - name: stg_ecommerce__order_items
+      description: "Staging model for order items data"
+      columns:
+        - name: order_item_id
+          description: "Unique identifier for each order item"
+          data_tests:
+            - unique
+            - not_null
+        - name: order_id
+          description: "Identifier for the order associated with the order item"
+          data_tests:
+            - not_null
+
+    - name: stg_ecommerce__products
+      description: "Staging model for products data"
+      columns:
+        - name: product_id
+          description: "Unique identifier for each product"
+          data_tests:
+            - unique
+            - not_null
