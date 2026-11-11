@@ -23,7 +23,8 @@
   * `database`: **ecommerce_db** (the database housing your raw data)
   * `schema`: **dbt_schema** (dbt will automatically create this schema in Snowflake to store transformed models)
 * **Privileges:** Ensure the dbt user/role has `USAGE` privileges on the database and warehouse, and `SELECT` privileges on the raw `snowflake_schema` tables.
-* **dbt_project.yml** has all metadata for this project name, version, path to each folders like models, seeds, 
-* In Module create two folders **Staging** and **Mart**. Inside Mart create **Core**.
-* In folder **Staging** create all sql files for each table and In staging process we have to clean the raw dataset from wrong datatype or trimming ect.,
-* 
+* **dbt_project.yml** has all metadata for this project name, version, path to each folders like models, seeds, test, macros, snapshot, analysis then target paths and clean target and last how the models has to be materialized (view or table).
+* In models folder we need to create **src_models yml** file for setting up the connection to specific database and schema of snowflake account and name the list of tables in that database.
+* So, When we run dbt models the dbt reads this src yml file and then connect to the specific mentioned database and schema then checks the models table contains in src yml then run the query against it
+Also, we can use this file for run test by mentioning columns and conditions (this tests on raw data tables which is source from snowflake).
+* Then, create the stg_yml file for running the generic test by mentioning the project path models and the specific stg_sql file and in that mention the columns with required condition to check.
